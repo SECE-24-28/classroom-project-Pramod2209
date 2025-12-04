@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Management</title>
+    <script src="script.js" defer></script>
+
+    <style>
+        body { font-family: Arial; background:#f2f2f2; padding:20px; }
+        .button { text-align:center; margin-bottom:20px; }
+        .button button, .form button {
+            padding:10px 20px;
+            margin:5px;
+            border:none;
+            background:#222;
+            color:white;
+            border-radius:6px;
+            cursor:pointer;
+        }
+        .button button:hover, .form button:hover { opacity:.7; }
+        .form {
+            background:white; padding:15px;
+            border-radius:10px; display:flex;
+            justify-content:center; gap:10px;
+            margin-bottom:20px;
+        }
+        .form input { padding:8px; width:150px; }
+        .result {
+            background:white; padding:20px;
+            border-radius:10px; height:250px;
+            overflow-y:auto;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="button">
+        <h1>Student Management System</h1>
+
+        <button onclick="viewStudents()">View Students</button>
+        <button onclick="marksAbove90()">Student's Mark ≥ 90</button>
+        <button onclick="marksBelow89Above80()">Mark < 89 and ≥ 80</button>
+        <button onclick="marksBelow79Above70()">Mark < 79 and ≥ 70</button>
+        <button onclick="marksBelow69Above60()">Mark < 69 and ≥ 60</button>
+        <button onclick="marksBelow59Above50()">Mark < 59 and ≥ 50</button>
+        <button onclick="marksBelow49()">Mark ≤ 49</button>
+    </div>
+
+    <div class="form">
+        <input type="number" id="sid" placeholder="Student ID">
+        <input type="text" id="sname" placeholder="Student Name">
+        <input type="number" id="smark" placeholder="Student Mark">
+
+        <button onclick="addstudent()">Add Student</button>
+    </div>
+
+    <div class="result" id="result">
+        <p><i>Results will appear here...</i></p>
+    </div>
+
+</body>
+</html>
