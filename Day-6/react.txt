@@ -1,0 +1,122 @@
+Increment, decrement:
+=====================
+import { useState } from "react"
+
+function App() {
+  const [count, setCount] = useState(5);
+  return (
+    <>
+      <h1>WELCOME {count}</h1>
+      <button onClick = {() => {setCount(count + 1)}}>+</button>
+      <button onClick = {() => {setCount(count - 1)}}>-</button>
+    </>
+  )
+}
+
+export default App
+_______________________________________________________________
+
+Text Color Changing:
+====================
+import { useState } from "react"
+
+function App() {
+  const [color, setColor] = useState("black");
+  return (
+    <>
+      <h1 style = {{color}}>Color: {color}</h1>
+      <button onClick = {() => {setColor("red")}}>Red</button>
+      <button onClick = {() => {setColor("green")}}>Green</button>
+      <button onClick = {() => {setColor("blue")}}>Blue</button>
+    </>
+  )
+}
+
+export default App
+_______________________________________________________________
+
+Toggle:
+import { useState } from "react"
+
+function App() {
+  const [isOn, setIsOn] = useState(false);
+  return (
+    <>
+      <h1>{isOn ? "ON" : "OFF"}</h1>
+      <button onClick = {() => {setIsOn(!isOn)}}>Toggle</button>
+    </>
+  )
+}
+
+export default App
+_______________________________________________________________
+
+Array Manipulation:
+===================
+
+import { useState } from "react"
+
+function App() {
+  const [a, setA] = useState([1, 2, 3, 4, 5, 6, 7, 8, 9, 1, 0]);
+  return (
+    <>
+      <h1>{a}</h1>
+      <button onClick = {() => setA(a.length)}>Length</button>
+    </>
+  )
+}
+
+export default App
+_______________________________________________________________
+
+function App() {
+  const productList = ["fruit", "vegs", "milk"];
+  return (
+    <>
+    <h1>Product List: </h1>
+    {
+      productList.map((s, i) => (<p key = {i}>{s}</p>))
+    }
+    </>
+  )
+}
+export default App
+_______________________________________________________________
+
+Object Manipulation:
+====================
+import { useState } from "react"
+
+function App() {
+  const [a, setA] = useState({name: "AI"});
+  return (
+    <>
+      <h1>Name: {a.name}</h1>
+      <button onClick = {() => setA({name: "React"})}>Click</button>
+    </>
+  )
+}
+
+export default App
+_______________________________________________________________
+
+Likes-Dislikes:
+===============
+
+import { useState } from "react"
+
+function App() {
+  const [like, setLike] = useState(0);
+  const [dislike, setDislike] = useState(0);
+  return (
+    <>
+      <h1>Likes: {like}</h1>
+      <h1>Dislikes: {dislike}</h1>
+      <button onClick = {() => setLike(like + 1)}>Like</button>
+      <button onClick = {() => setDislike(dislike + 1)}>Dislike</button>
+    </>
+  )
+}
+
+export default App
+_______________________________________________________________
