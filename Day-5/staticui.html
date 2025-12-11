@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quiz</title>
+
+  <style>
+    body {
+      background: url('bg.jpeg') no-repeat center center/cover;
+      font-family: Arial, sans-serif;
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    .container {
+      background: #1c2733;
+      width: 420px;
+      padding: 25px;
+      border-radius: 14px;
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 28px;
+      margin-bottom: 20px;
+    }
+
+    button {
+      background: #1e8c66;
+      padding: 12px 25px;
+      border: none;
+      border-radius: 20px;
+      color: white;
+      font-size: 16px;
+      cursor: pointer;
+      transition: 0.2s;
+    }
+
+    button:hover {
+      background: #187456;
+    }
+
+    .quiz-container {
+      display: none;
+      text-align: left;
+      margin-top: 20px;
+    }
+
+    .question p {
+      font-size: 15px;
+      margin-bottom: 10px;
+      font-weight: bold;
+    }
+
+    label {
+      display: block;
+      background: #243241;
+      padding: 10px;
+      border-radius: 8px;
+      margin-bottom: 10px;
+      cursor: pointer;
+      border: 1px solid #303c49;
+      transition: 0.2s;
+    }
+
+    label:hover {
+      background: #2c3a4a;
+    }
+
+    input[type="radio"] {
+      margin-right: 10px;
+      accent-color: #1e8c66;
+    }
+
+    .result {
+      text-align: center;
+      margin-top: 20px;
+      font-size: 16px;
+    }
+
+    #prevBtn {
+      float: left;
+    }
+
+    #nextBtn, #submitBtn {
+      float: right;
+      margin-left: 10px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container" id="frontPage">
+    <h1>Welcome to the Quiz!</h1>
+    <p>Test your knowledge on web development.</p>
+    <button id="startQuizBtn">Start Quiz</button>
+  </div>
+  <div class="container quiz-container" id="quizContainer">
+    <h2>Quiz</h2>
+    <div class="question">
+      <p>1. What does HTML stand for?</p> 
+      <label><input type="radio" name="q1" value="wrong"> High Text Machine Language</label>
+      <label><input type="radio" name="q1" value="correct"> Hyper Text Markup Language</label> 
+      <label><input type="radio" name="q1" value="wrong"> Hyper Text Machine Language</label> 
+      <label><input type="radio" name="q1" value="wrong"> High Text Markup Language</label>
+    </div> 
+    <div class="question">
+      <p>2. Which keyword declares a constant in JavaScript?</p>
+      <label><input type="radio" name="q2" value="wrong"> var</label>
+      <label><input type="radio" name="q2" value="wrong"> let</label>
+      <label><input type="radio" name="q2" value="correct"> const</label>
+      <label><input type="radio" name="q2" value="wrong"> static</label>
+    </div>
+    <div class="question">
+      <p>3. Which symbol is used to select an element by its class in CSS?</p>
+      <label><input type="radio" name="q3" value="wrong"> #</label>
+      <label><input type="radio" name="q3" value="correct"> .</label>
+      <label><input type="radio" name="q3" value="wrong"> *</label>
+      <label><input type="radio" name="q3" value="wrong"> :</label>
+    </div>
+    <div class="question">
+      <p>4. Which CSS property is used to change the text color?</p>
+      <label><input type="radio" name="q4" value="wrong"> bgcolor</label>
+      <label><input type="radio" name="q4" value="correct"> color</label>
+      <label><input type="radio" name="q4" value="wrong"> text-color</label>
+      <label><input type="radio" name="q4" value="wrong"> font-color</label>
+    </div>
+    <div class="question">
+      <p>5. What HTML tag is used to create a hyperlink that links to another page or resource?</p>
+      <label><input type="radio" name="q5" value="correct"> &lt;a&gt;</label>
+      <label><input type="radio" name="q5" value="wrong"> &lt;nav&gt;</label>
+      <label><input type="radio" name="q5" value="wrong"> &lt;link&gt;</label>
+      <label><input type="radio" name="q5" value="wrong"> &lt;href&gt;</label>
+    </div>
+    <button id="prevBtn">Previous</button>
+    <button id="nextBtn">Next</button>
+    <button id="submitBtn">Submit</button>
+    <div class="result" id="resultBox"></div>
+  </div>
+  <script>
+    const startBtn = document.getElementById("startQuizBtn");
+    const frontPage = document.getElementById("frontPage");
+    const quizContainer = document.getElementById("quizContainer");
+    startBtn.addEventListener("click", () => {
+      frontPage.style.display = "none";
+      quizContainer.style.display = "block";
+    });
+    const questions = document.querySelectorAll(".question > p");
+    const labels = document.querySelectorAll(".question label");
+    let questionBlocks = [];
+    let answers = [];
+    let index = 0;
+    let labelIndex = 0;
+    questions.forEach(() => {
+      questionBlocks.push({
+        question: questions[index],
+        options: [
+          labels[labelIndex],
+          labels[labelIndex + 1],
+          labels[labelIndex + 2],
+          labels[labelIndex + 3]
+        ]
+      });
+      answers.push(null);
+      labelIndex += 4;
+      index++;
+    });
+    index = 0;
+    function hideAll() {
+      questionBlocks.forEach(block => {
+        block.question.style.display = "none";
+        block.options.forEach(opt => opt.style.display = "none");
+      });
+    }
+    function showQuestion(i) {
+      questionBlocks[i].question.style.display = "block";
+      questionBlocks[i].options.forEach(opt => opt.style.display = "block");
+    }
+    hideAll();
+    showQuestion(0);
+    const nextBtn = document.getElementById("nextBtn");
+    const prevBtn = document.getElementById("prevBtn");
+    const submitBtn = document.getElementById("submitBtn");
+    const resultBox = document.getElementById("resultBox");
+    prevBtn.style.display = "none";
+    submitBtn.style.display = "none";
+    nextBtn.addEventListener("click", () => {
+      let qName = "q" + (index + 1);
+      let selected = document.querySelector(`input[name="${qName}"]:checked`);
+      if (!selected) { alert("Please select an answer!"); return; }
+      answers[index] = selected.value;
+      hideAll();
+      index++;
+      showQuestion(index);
+      prevBtn.style.display = "inline-block";
+      if (index === questionBlocks.length - 1) {
+        nextBtn.style.display = "none";
+        submitBtn.style.display = "inline-block";
+      }
+    });
+    prevBtn.addEventListener("click", () => {
+      hideAll();
+      index--;
+      showQuestion(index);
+      if (index === 0) prevBtn.style.display = "none";
+      nextBtn.style.display = "inline-block";
+      submitBtn.style.display = "none";
+    });
+    submitBtn.addEventListener("click", () => {
+      let qName = "q" + (index + 1);
+      let selected = document.querySelector(`input[name="${qName}"]:checked`);
+      if (!selected) { alert("Please select an answer!"); return; }
+      answers[index] = selected.value;
+      let score = answers.filter(a => a === "correct").length;
+      hideAll();
+      nextBtn.style.display = "none";
+      prevBtn.style.display = "none";
+      submitBtn.style.display = "none";
+      resultBox.style.display = "block";
+      resultBox.textContent = `Result: ${score} / ${questionBlocks.length}`;
+    });
+  </script>
+</body>
+</html>
