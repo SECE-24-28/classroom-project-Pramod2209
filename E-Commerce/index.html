@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ElectroWorld - Your Tech Destination</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800 font-sans">
+
+    <!-- Header -->
+    <header class="bg-white/80 backdrop-blur-md shadow-sm sticky top-0 z-50">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#" class="text-3xl font-bold text-indigo-600">ElectroWorld</a>
+            <div class="hidden md:flex items-center space-x-8 text-lg">
+                <a href="#home" class="hover:text-indigo-600 transition duration-300">Home</a>
+                <a href="#products" class="hover:text-indigo-600 transition duration-300">Products</a>
+                <a href="#bestsellers" class="hover:text-indigo-600 transition duration-300">Best Sellers</a>
+                <a href="#new-arrivals" class="hover:text-indigo-600 transition duration-300">New Arrivals</a>
+                <a href="#about" class="hover:text-indigo-600 transition duration-300">About</a>
+                <a href="#contact" class="hover:text-indigo-600 transition duration-300">Contact</a>
+            </div>
+            <div class="flex items-center space-x-4">
+                <a href="#" class="text-gray-600 hover:text-indigo-600 transition duration-300"><i class="fa-solid fa-magnifying-glass"></i></a>
+                <a href="#" class="text-gray-600 hover:text-indigo-600 transition duration-300"><i class="fa-solid fa-user"></i></a>
+                <a href="#" class="text-gray-600 hover:text-indigo-600 transition duration-300 relative">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                    <span class="absolute -top-2 -right-2 bg-indigo-600 text-white text-xs rounded-full h-5 w-5 flex items-center justify-center">3</span>
+                </a>
+                <button id="menu-btn" class="md:hidden text-gray-600 hover:text-indigo-600">
+                    <i class="fa-solid fa-bars text-2xl"></i>
+                </button>
+            </div>
+        </nav>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white p-4">
+            <a href="#home" class="block py-2 px-4 text-sm hover:bg-indigo-50 rounded">Home</a>
+            <a href="#products" class="block py-2 px-4 text-sm hover:bg-indigo-50 rounded">Products</a>
+            <a href="#bestsellers" class="block py-2 px-4 text-sm hover:bg-indigo-50 rounded">Best Sellers</a>
+            <a href="#new-arrivals" class="block py-2 px-4 text-sm hover:bg-indigo-50 rounded">New Arrivals</a>
+            <a href="#about" class="block py-2 px-4 text-sm hover:bg-indigo-50 rounded">About</a>
+            <a href="#contact" class="block py-2 px-4 text-sm hover:bg-indigo-50 rounded">Contact</a>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Section -->
+<section id="home" class="relative h-[600px] flex items-center justify-center text-white bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1550751827-4bd374c3f58b?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80');">
+            <div class="absolute inset-0 bg-black/50"></div>
+            <div class="relative text-center z-10 p-6">
+                <h1 class="text-5xl md:text-7xl font-extrabold mb-4 leading-tight">Latest Tech, Unbeatable Prices</h1>
+                <p class="text-xl md:text-2xl mb-8 font-light">Discover the future of electronics at ElectroWorld</p>
+                <a href="#products" class="bg-indigo-600 text-white font-bold py-3 px-8 rounded-full hover:bg-indigo-700 transition duration-300 text-lg">Explore Now</a>
+            </div>
+        </section>
+
+        <!-- Products Section -->
+        <section id="products" class="py-20 bg-white">
+            <div class="container mx-auto px-6">
+                <h2 class="text-4xl font-bold text-center mb-12">Featured Products</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <!-- Product Card 1 -->
+                    <div class="bg-gray-50 rounded-lg shadow-md overflow-hidden transform hover:-translate-y-2 transition duration-300">
+                        <img src="https://images.unsplash.com/photo-1517336714731-489689fd1ca8?q=80&w=1926&auto=format&fit=crop" alt="Laptop" class="w-full h-56 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold mb-2">ProBook X1</h3>
+                            <p class="text-gray-600 mb-4">High-performance laptop for professionals.</p>
+                            <div class="flex justify-between items-center">
+                                <span class="text-2xl font-bold text-indigo-600">$1299</span>
+                                <button class="bg-indigo-100 text-indigo-600 px-4 py-2 rounded-full font-semibold hover:bg-indigo-200 transition">Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Product Card 2 -->
+                    <div class="bg-gray-50 rounded-lg shadow-md overflow-hidden transform hover:-translate-y-2 transition duration-300">
+                        <img src="https://toppng.com/uploads/preview/hd-png-of-apple-iphone-15-pro-max-in-natural-titanium-11695045967pz2x70tl2h.webp" alt="iPhone 15 Pro Max" class="w-full h-56 object-contain p-4">
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold mb-2">iPhone 15 Pro Max</h3>
+                            <p class="text-gray-600 mb-4">In stunning Natural Titanium finish.</p>
+                            <div class="flex justify-between items-center">
+                                <span class="text-2xl font-bold text-indigo-600">$1199</span>
+                                <button class="bg-indigo-100 text-indigo-600 px-4 py-2 rounded-full font-semibold hover:bg-indigo-200 transition">Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Product Card 3 -->
+                    <div class="bg-gray-50 rounded-lg shadow-md overflow-hidden transform hover:-translate-y-2 transition duration-300">
+                        <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?q=80&w=2070&auto=format&fit=crop" alt="Headphones" class="w-full h-56 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold mb-2">AudioBliss Pro</h3>
+                            <p class="text-gray-600 mb-4">Noise-cancelling headphones for immersive sound.</p>
+                            <div class="flex justify-between items-center">
+                                <span class="text-2xl font-bold text-indigo-600">$249</span>
+                                <button class="bg-indigo-100 text-indigo-600 px-4 py-2 rounded-full font-semibold hover:bg-indigo-200 transition">Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Product Card 4 -->
+                    <div class="bg-gray-50 rounded-lg shadow-md overflow-hidden transform hover:-translate-y-2 transition duration-300">
+                        <img src="https://images.unsplash.com/photo-1546868871-7041f2a55e12?q=80&w=1964&auto=format&fit=crop" alt="Smartwatch" class="w-full h-56 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold mb-2">TimeMaster 5</h3>
+                            <p class="text-gray-600 mb-4">Stay connected with our latest smartwatch.</p>
+                            <div class="flex justify-between items-center">
+                                <span class="text-2xl font-bold text-indigo-600">$399</span>
+                                <button class="bg-indigo-100 text-indigo-600 px-4 py-2 rounded-full font-semibold hover:bg-indigo-200 transition">Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Best Sellers Section -->
+        <section id="bestsellers" class="py-20 bg-gray-50">
+            <div class="container mx-auto px-6">
+                <h2 class="text-4xl font-bold text-center mb-12">Our Best Sellers</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Best Seller Card 1 -->
+                    <div class="bg-white rounded-lg shadow-md overflow-hidden transform hover:-translate-y-2 transition duration-300">
+                        <img src="https://t4.ftcdn.net/jpg/04/60/88/55/360_F_460885515_opwe6mCF5AZl8DKQfhMz9rYgOjrtrrI2.jpg" alt="Gaming Console" class="w-full h-64 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold mb-2">PlayBox 6</h3>
+                            <p class="text-gray-600 mb-4">Next-gen gaming with stunning 8K graphics.</p>
+                            <div class="flex justify-between items-center">
+                                <span class="text-2xl font-bold text-indigo-600">$499</span>
+                                <button class="bg-indigo-100 text-indigo-600 px-4 py-2 rounded-full font-semibold hover:bg-indigo-200 transition">Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Best Seller Card 2 -->
+                    <div class="bg-white rounded-lg shadow-md overflow-hidden transform hover:-translate-y-2 transition duration-300">
+                        <img src="https://plus.unsplash.com/premium_photo-1679513691474-73102089c117?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8aGVhZHBob25lc3xlbnwwfHwwfHx8MA%3D%3D" alt="Wireless Earbuds" class="w-full h-64 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold mb-2">SoundPods Lite</h3>
+                            <p class="text-gray-600 mb-4">Crystal clear audio in a compact design.</p>
+                            <div class="flex justify-between items-center">
+                                <span class="text-2xl font-bold text-indigo-600">$129</span>
+                                <button class="bg-indigo-100 text-indigo-600 px-4 py-2 rounded-full font-semibold hover:bg-indigo-200 transition">Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Best Seller Card 3 -->
+                    <div class="bg-white rounded-lg shadow-md overflow-hidden transform hover:-translate-y-2 transition duration-300">
+                        <img src="https://t4.ftcdn.net/jpg/03/64/41/07/360_F_364410756_Ev3WoDfNyxO9c9n4tYIsU5YBQWAP3UF8.jpg" alt="Drone" class="w-full h-64 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold mb-2">SkyCam Pro</h3>
+                            <p class="text-gray-600 mb-4">Capture breathtaking aerial shots with our 4K drone.</p>
+                            <div class="flex justify-between items-center">
+                                <span class="text-2xl font-bold text-indigo-600">$799</span>
+                                <button class="bg-indigo-100 text-indigo-600 px-4 py-2 rounded-full font-semibold hover:bg-indigo-200 transition">Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- New Arrivals Section -->
+        <section id="new-arrivals" class="py-20 bg-gray-50">
+            <div class="container mx-auto px-6">
+                <h2 class="text-4xl font-bold text-center mb-12">New Arrivals</h2>
+                <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-8">
+                    <!-- New Product 1: Camera -->
+                    <div class="bg-white rounded-lg shadow-md overflow-hidden transform hover:-translate-y-2 transition duration-300">
+                        <img src="https://images.unsplash.com/photo-1516035069371-29a1b244cc32?q=80&w=1964&auto=format&fit=crop" alt="Camera" class="w-full h-56 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold mb-2">Capture Pro X</h3>
+                            <p class="text-gray-600 mb-4">Professional DSLR camera for stunning photos.</p>
+                            <div class="flex justify-between items-center">
+                                <span class="text-2xl font-bold text-indigo-600">$1999</span>
+                                <button class="bg-indigo-100 text-indigo-600 px-4 py-2 rounded-full font-semibold hover:bg-indigo-200 transition">Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- New Product 2: PlayStation -->
+                    <div class="bg-white rounded-lg shadow-md overflow-hidden transform hover:-translate-y-2 transition duration-300">
+                        <img src="https://images.unsplash.com/photo-1606144042614-b2417e99c4e3?q=80&w=2070&auto=format&fit=crop" alt="PlayStation" class="w-full h-56 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold mb-2">GameStation 5</h3>
+                            <p class="text-gray-600 mb-4">Next-level gaming experience awaits.</p>
+                            <div class="flex justify-between items-center">
+                                <span class="text-2xl font-bold text-indigo-600">$499</span>
+                                <button class="bg-indigo-100 text-indigo-600 px-4 py-2 rounded-full font-semibold hover:bg-indigo-200 transition">Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- New Product 3: PC -->
+                    <div class="bg-white rounded-lg shadow-md overflow-hidden transform hover:-translate-y-2 transition duration-300">
+                        <img src="https://images.unsplash.com/photo-1593640408182-31c70c8268f5?q=80&w=1942&auto=format&fit=crop" alt="Gaming PC" class="w-full h-56 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold mb-2">Aurora R15</h3>
+                            <p class="text-gray-600 mb-4">Ultimate gaming PC with liquid cooling.</p>
+                            <div class="flex justify-between items-center">
+                                <span class="text-2xl font-bold text-indigo-600">$2499</span>
+                                <button class="bg-indigo-100 text-indigo-600 px-4 py-2 rounded-full font-semibold hover:bg-indigo-200 transition">Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- New Product 4: Mic -->
+                    <div class="bg-white rounded-lg shadow-md overflow-hidden transform hover:-translate-y-2 transition duration-300">
+                        <img src="images/microphone.jpg" alt="Microphone" class="w-full h-56 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold mb-2">Studio Mic Pro</h3>
+                            <p class="text-gray-600 mb-4">Record crystal-clear audio for your podcast.</p>
+                            <div class="flex justify-between items-center">
+                                <span class="text-2xl font-bold text-indigo-600">$149</span>
+                                <button class="bg-indigo-100 text-indigo-600 px-4 py-2 rounded-full font-semibold hover:bg-indigo-200 transition">Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- New Product 5: Pendrive -->
+                    <div class="bg-white rounded-lg shadow-md overflow-hidden transform hover:-translate-y-2 transition duration-300">
+                        <img src="images/pendrive.jpg" alt="Pendrive" class="w-full h-56 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold mb-2">SwiftDrive 256GB</h3>
+                            <p class="text-gray-600 mb-4">Fast and reliable USB 3.2 flash drive.</p>
+                            <div class="flex justify-between items-center">
+                                <span class="text-2xl font-bold text-indigo-600">$29</span>
+                                <button class="bg-indigo-100 text-indigo-600 px-4 py-2 rounded-full font-semibold hover:bg-indigo-200 transition">Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Us Section -->
+        <section id="about" class="py-20 bg-white">
+            <div class="container mx-auto px-6">
+                <h2 class="text-4xl font-bold text-center mb-12">About ElectroWorld</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                    <div>
+                        <h3 class="text-2xl font-semibold mb-4">Your Trusted Tech Partner</h3>
+                        <p class="text-gray-600 mb-6">At ElectroWorld, we're passionate about bringing you the latest and greatest in technology. With over a decade of experience in the electronics industry, we pride ourselves on offering high-quality products at competitive prices.</p>
+                        <p class="text-gray-600 mb-6">Our team of tech enthusiasts works tirelessly to curate the best selection of gadgets, from cutting-edge smartphones to powerful gaming consoles. We believe in providing exceptional customer service and ensuring your shopping experience is seamless and enjoyable.</p>
+                        <div class="grid grid-cols-2 gap-4">
+                            <div class="text-center">
+                                <div class="text-3xl font-bold text-indigo-600">10K+</div>
+                                <div class="text-sm text-gray-600">Happy Customers</div>
+                            </div>
+                            <div class="text-center">
+                                <div class="text-3xl font-bold text-indigo-600">500+</div>
+                                <div class="text-sm text-gray-600">Products</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="relative">
+                        <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?q=80&w=2070&auto=format&fit=crop" alt="Tech Store" class="rounded-lg shadow-lg w-full h-96 object-cover">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials Section -->
+        <section id="testimonials" class="py-20 bg-gray-50">
+            <div class="container mx-auto px-6">
+                <h2 class="text-4xl font-bold text-center mb-12">What Our Customers Say</h2>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div class="bg-white p-6 rounded-lg shadow-md">
+                        <div class="flex items-center mb-4">
+                            <div class="w-12 h-12 bg-indigo-100 rounded-full flex items-center justify-center mr-4">
+                                <i class="fa-solid fa-user text-indigo-600"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold">Sarah Johnson</h4>
+                                <div class="flex text-yellow-400">
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="text-gray-600">"Amazing selection of products and lightning-fast delivery. The laptop I ordered exceeded my expectations!"</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg shadow-md">
+                        <div class="flex items-center mb-4">
+                            <div class="w-12 h-12 bg-indigo-100 rounded-full flex items-center justify-center mr-4">
+                                <i class="fa-solid fa-user text-indigo-600"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold">Mike Chen</h4>
+                                <div class="flex text-yellow-400">
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="text-gray-600">"Great customer service and competitive prices. Found everything I needed for my home office setup."</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg shadow-md">
+                        <div class="flex items-center mb-4">
+                            <div class="w-12 h-12 bg-indigo-100 rounded-full flex items-center justify-center mr-4">
+                                <i class="fa-solid fa-user text-indigo-600"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold">Emily Davis</h4>
+                                <div class="flex text-yellow-400">
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="text-gray-600">"The gaming console I purchased is incredible. ElectroWorld has become my go-to for all tech needs!"</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Newsletter Section -->
+        <section id="newsletter" class="py-20 bg-indigo-600 text-white">
+            <div class="container mx-auto px-6 text-center">
+                <h2 class="text-4xl font-bold mb-4">Stay Updated</h2>
+                <p class="text-xl mb-8">Subscribe to our newsletter for the latest tech news and exclusive deals</p>
+                <div class="max-w-md mx-auto">
+                    <form class="flex flex-col sm:flex-row gap-4">
+                        <input type="email" placeholder="Enter your email" class="flex-1 px-4 py-3 rounded-md text-gray-800 focus:outline-none focus:ring-2 focus:ring-white">
+                        <button type="submit" class="bg-white text-indigo-600 font-bold py-3 px-8 rounded-md hover:bg-gray-100 transition duration-300">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="py-20 bg-white">
+            <div class="container mx-auto px-6">
+                <h2 class="text-4xl font-bold text-center mb-12">Contact Us</h2>
+                <div class="max-w-3xl mx-auto">
+                    <form id="contact-form" class="bg-gray-50 p-8 rounded-lg shadow-md">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                            <input type="text" id="name" placeholder="Your Name" class="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500">
+                            <input type="email" id="email" placeholder="Your Email" class="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500">
+                        </div>
+                        <textarea id="message" placeholder="Your Message" rows="6" class="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500 mb-6"></textarea>
+                        <button type="submit" class="w-full bg-indigo-600 text-white font-bold py-3 px-8 rounded-md hover:bg-indigo-700 transition duration-300">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-12">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <!-- Company Info -->
+                <div>
+                    <h3 class="text-2xl font-bold text-indigo-400 mb-4">ElectroWorld</h3>
+                    <p class="text-gray-300 mb-4">Your ultimate destination for the latest technology and electronics. Quality products, unbeatable prices, and exceptional service.</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-300 hover:text-indigo-400 transition duration-300"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-gray-300 hover:text-indigo-400 transition duration-300"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-gray-300 hover:text-indigo-400 transition duration-300"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-gray-300 hover:text-indigo-400 transition duration-300"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#home" class="text-gray-300 hover:text-indigo-400 transition duration-300">Home</a></li>
+                        <li><a href="#products" class="text-gray-300 hover:text-indigo-400 transition duration-300">Products</a></li>
+                        <li><a href="#bestsellers" class="text-gray-300 hover:text-indigo-400 transition duration-300">Best Sellers</a></li>
+                        <li><a href="#new-arrivals" class="text-gray-300 hover:text-indigo-400 transition duration-300">New Arrivals</a></li>
+                        <li><a href="#about" class="text-gray-300 hover:text-indigo-400 transition duration-300">About Us</a></li>
+                    </ul>
+                </div>
+
+                <!-- Customer Service -->
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Customer Service</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#contact" class="text-gray-300 hover:text-indigo-400 transition duration-300">Contact Us</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-indigo-400 transition duration-300">Shipping Info</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-indigo-400 transition duration-300">Returns & Exchanges</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-indigo-400 transition duration-300">FAQ</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-indigo-400 transition duration-300">Size Guide</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact Info -->
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Get in Touch</h4>
+                    <div class="space-y-2">
+                        <p class="text-gray-300 flex items-center">
+                            <i class="fas fa-map-marker-alt mr-2 text-indigo-400"></i>
+                            123 Tech Street, Silicon Valley, CA 94043
+                        </p>
+                        <p class="text-gray-300 flex items-center">
+                            <i class="fas fa-phone mr-2 text-indigo-400"></i>
+                            (555) 123-4567
+                        </p>
+                        <p class="text-gray-300 flex items-center">
+                            <i class="fas fa-envelope mr-2 text-indigo-400"></i>
+                            info@electroworld.com
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bottom Bar -->
+            <div class="border-t border-gray-700 mt-8 pt-8 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-300 text-sm">&copy; 2024 ElectroWorld. All rights reserved.</p>
+                <div class="flex space-x-6 mt-4 md:mt-0">
+                    <a href="#" class="text-gray-300 hover:text-indigo-400 transition duration-300 text-sm">Privacy Policy</a>
+                    <a href="#" class="text-gray-300 hover:text-indigo-400 transition duration-300 text-sm">Terms of Service</a>
+                    <a href="#" class="text-gray-300 hover:text-indigo-400 transition duration-300 text-sm">Cookie Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Cart Modal -->
+    <div id="cart-modal" class="fixed inset-0 bg-black bg-opacity-50 hidden z-50">
+        <div class="flex items-center justify-center min-h-screen p-4">
+            <div class="bg-white rounded-lg shadow-xl max-w-md w-full max-h-[80vh] overflow-y-auto">
+                <div class="p-6">
+                    <div class="flex justify-between items-center mb-4">
+                        <h3 class="text-xl font-semibold">Your Cart</h3>
+                        <button id="close-cart" class="text-gray-400 hover:text-gray-600">
+                            <i class="fas fa-times"></i>
+                        </button>
+                    </div>
+                    <div id="cart-items" class="space-y-4">
+                        <!-- Cart items will be added here dynamically -->
+                        <p class="text-gray-500 text-center py-8">Your cart is empty</p>
+                    </div>
+                    <div class="border-t pt-4 mt-4">
+                        <div class="flex justify-between items-center mb-4">
+                            <span class="text-lg font-semibold">Total:</span>
+                            <span id="cart-total" class="text-lg font-bold text-indigo-600">$0.00</span>
+                        </div>
+                        <button class="w-full bg-indigo-600 text-white py-3 px-4 rounded-md hover:bg-indigo-700 transition duration-300">
+                            Proceed to Checkout
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
